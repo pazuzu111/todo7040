@@ -1,0 +1,20 @@
+const express = require('express');
+const todonotesRouter = express.Router();
+
+const todonotesController = require('../controllers/todonotes-controller');
+
+todonotesRouter.get('/', todonotesController.index);
+
+//maybe need?
+// todonotesRouter.get('/new', (req, res) => {
+//   res.render('todonotes/todonotes-new');
+// });
+todonotesRouter.post('/', todonotesController.create);
+
+todonotesRouter.get('/:id', todonotesController.show);
+todonotesRouter.get('/:id/edit', todonotesController.edit);
+todonotesRouter.put('/:id', todonotesController.update);
+
+todonotesRouter.delete('/:id', todonotesController.delete);
+
+module.exports = todonotesRouter;
