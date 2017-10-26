@@ -5,9 +5,7 @@ const todonotesController = {};
 todonotesController.index = (req, res) => {
     Todonote.findAll()
     .then(todonotes => {
-        res.status(200).render('todonotes/todonotes-index', {
-             todonotes,
-        });
+        res.status(200).render('todonotes/todonotes-index', {todonotes});
     })
     .catch(err => {
         console.log(err);
@@ -19,7 +17,7 @@ todonotesController.show = (req, res) => {
   Todonote.findById(req.params.id)
     .then(todonote => {
       res.status(200).render('todonotes/todonotes-show', {
-        todonote,
+        todonote
       });
     })
     .catch(err => {
@@ -30,10 +28,8 @@ todonotesController.show = (req, res) => {
 
 todonotesController.create = (req, res) => {
   Todonote.create({
-    question: req.body.question,
-    answer: req.body.answer,
+    content: req.body.content,
     category: req.body.category,
-    difficulty: req.body.difficulty,
   }).then(todonote => {
     res.redirect(`/todonotes/${todonote.id}`)
   })
@@ -46,9 +42,7 @@ todonotesController.create = (req, res) => {
 todonotesController.edit = (req, res) => {
   Todonote.findById(req.params.id)
     .then(todonote => {
-      res.status(200).render('todonotes/todonotes-edit', {
-       todonote,
-      });
+      res.status(200).render("todonotes/todonotes-edit", {todonote});
     })
     .catch(err => {
       console.log(err);
@@ -58,10 +52,8 @@ todonotesController.edit = (req, res) => {
 
 todonotesController.update = (req, res) => {
   Todonote.update({
-    question: req.body.question,
-    answer: req.body.answer,
+    content: req.body.content,
     category: req.body.category,
-    difficulty: req.body.difficulty,
   }, req.params.id)
     .then(todonote => {
       res.redirect(`/todonotes/${todonote.id}`)

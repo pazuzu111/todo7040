@@ -1,0 +1,18 @@
+<% include ../partials/boilerplate %>
+
+<div class="todonote-container">
+<% todonotes.forEach(todonote => { %>
+  <div class="todonote">
+    <div class="meta">
+        <span class="category"><%= todonote.content %></span>
+
+      <span class="category"><%= todonote.category %></span>
+    </div>
+    <a class="linktosingle" href="/todonotes/<%= todonote.id %>">see upclose</a>
+  </div>
+<% }) %>
+</div>
+
+<a href="todonotes/new/">+ todo</a>
+
+<% include ../partials/end %>

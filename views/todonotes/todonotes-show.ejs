@@ -1,0 +1,18 @@
+
+<% include ../partials/boilerplate %>
+
+    <div class="todonotes-container">
+      <div class="todonote">
+        <h1><%= todonote.content %></h1>
+        <h2><%= todonote.category %></h2>
+
+        <a href="/todonotes">Back to all todos</a>
+        <a href="/todonotes/<%=todonote.id %>/edit">Edit</a>
+        <form class="delete" action="/todonotes/<%= todonote.id%>?_method=DELETE" method="POST">
+            <input class="dellink" type="submit" value="Delete">
+        </form>
+
+      </div>
+    </div>
+
+<% include ../partials/end %>

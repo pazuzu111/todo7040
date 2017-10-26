@@ -17,17 +17,15 @@ Todonote.create = todonote => {
     `INSERT INTO todonotes
     (content, category)
     VALUES ($1, $2)
-    (content, category)
     RETURNING *`, [todonote.content, todonote.category]);
 };
 
 Todonote.update = (todonote, id) => {
   return db.one(
-    `UPDATE todonotes SET
+  `UPDATE todonotes SET
     content = $1,
     category = $2
-    WHERE id = $5
-    (content, category)
+    WHERE id = $3
     RETURNING *`, [todonote.content, todonote.category, id]);
 };
 

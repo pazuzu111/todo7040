@@ -8,9 +8,10 @@ const session = require('express-session');
 const passport = require('passport');
 
 const app = express();
+
 require('dotenv').config();
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`BAMMMMMMM!!! 👺 👺 👺 👺 ⚪ ️⚪ ️⚪ ️⚪️ `);
 });
@@ -25,21 +26,21 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 app.use(cookieParser());
 
-app.use(session({
-  secret: process.env.SECRET_KEY,
-  resave: false,
-  saveUninitialized: true,
-}));
+// app.use(session({
+//   secret: process.env.SECRET_KEY,
+//   resave: false,
+//   saveUninitialized: true,
+// }));
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 app.get('/', (req, res) => {
   res.render('index');
 });
 
-// const todoNotes = require('./routes/todo-routes');
-// app.use('/todos', TodoRoutes);
+const todoNotes = require('./routes/todonotes-routes');
+app.use('/todonotes', todoNotes);
 // const authRoutes = require('./routes/auth-routes');
 // app.use('/auth', authRoutes);
 // const userRoutes = require('./routes/user-routes');

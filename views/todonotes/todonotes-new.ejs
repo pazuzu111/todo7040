@@ -1,0 +1,16 @@
+<% include ../partials/boilerplate %>
+
+  <div class="form-page">
+    <div class="add">
+      <form action="/todonotes" method="POST">
+        <input type="text" name="content" placeholder="Content" />
+        <input type="text" name="category" placeholder="Category" />
+        <input type="submit" value="ADD!" />
+      </form>
+    </div>
+
+    <a href="/todonotes">Back to all todos</a>
+
+  </div>
+
+<% include ../partials/end %>
