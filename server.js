@@ -26,25 +26,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 app.use(cookieParser());
 
-// app.use(session({
-//   secret: process.env.SECRET_KEY,
-//   resave: false,
-//   saveUninitialized: true,
-// }));
-
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
   res.render('index');
 });
 
 const todoNotes = require('./routes/todonotes-routes');
 app.use('/todonotes', todoNotes);
-// const authRoutes = require('./routes/auth-routes');
-// app.use('/auth', authRoutes);
-// const userRoutes = require('./routes/user-routes');
-// app.use('/user', userRoutes);
 
 app.use('*', (req, res) => {
   res.status(404).send('Not Found');
