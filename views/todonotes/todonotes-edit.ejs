@@ -1,5 +1,15 @@
 <% include ../partials/boilerplate %>
 
+<div class="navbar">
+    <div class="left">
+        <a href="/">TODO</a>
+    </div>
+    <div class="right">
+        <a href="/">Home</a>
+        <a href="/todonotes">todos</a>
+    </div>
+</div>
+<br>
    <div class="form-page">
   <div class="edit">
     <form  action="/todonotes/<%= todonote.id%>?_method=PUT" method="POST">

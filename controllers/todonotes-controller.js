@@ -31,7 +31,7 @@ todonotesController.create = (req, res) => {
     content: req.body.content,
     category: req.body.category,
   }).then(todonote => {
-    res.redirect(`/todonotes/${todonote.id}`)
+    res.redirect(`/todonotes`)
   })
   .catch(err => {
     console.log(err);

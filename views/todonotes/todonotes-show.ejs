@@ -1,8 +1,17 @@
 
 <% include ../partials/boilerplate %>
-
+<div class="navbar">
+    <div class="left">
+        <a href="/">TODO</a>
+    </div>
+    <div class="right">
+        <a href="/">Home</a>
+        <a href="/todonotes">todos</a>
+    </div>
+</div>
+<br>
     <div class="todonotes-container">
-      <div class="todonote">
+      <div class="todonote1">
         <h1><%= todonote.content %></h1>
         <h2><%= todonote.category %></h2>
 
