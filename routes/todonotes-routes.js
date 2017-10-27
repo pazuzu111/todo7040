@@ -4,7 +4,7 @@ const todonotesRouter = express.Router();
 const todonotesController = require('../controllers/todonotes-controller');
 
 //the url that we want the index controller to render data to
-todonotesRouter.get('/', todonotesController.index);
+todonotesRouter.get('/todonotes', todonotesController.index);
 
 //maybe need?
 todonotesRouter.get('/new', (req, res) => {
