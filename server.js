@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 app.use(cookieParser());
 
-app.get('/index', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
