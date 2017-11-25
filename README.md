@@ -10,7 +10,8 @@ todo app full CRUD functionality (MVC)
 - psql for database
 
 
- # mods
+ # dependencies
+ ```sh
  "dependencies": 
  {
     "bcryptjs": "^2.4.3",
@@ -26,17 +27,17 @@ todo app full CRUD functionality (MVC)
     "passport": "^0.4.0",
     "pg-promise": "^7.0.3"
   }
-  
+  ```
   # future features 
   
   * authentication - passport
   
   you may clone and contribute!!! have fun!!!
-  
+  ```sh
   1) git clone https://github.com/pazuzu111/todo7040.git
   
   2) npm install
   
   3) npm start || nodemon server.js
-  
+  ```
   nodemon will keep server refreshing on its own (recommended)
