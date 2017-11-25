@@ -10,8 +10,8 @@ todo app full CRUD functionality (MVC)
 - psql for database
 
 
- # "dependencies": 
- 
+ # mods
+ "dependencies": 
  {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
