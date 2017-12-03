@@ -31,6 +31,7 @@ todo app full CRUD functionality (MVC)
   # future features 
   
   * authentication - passport
+  * user profiles - bcryptjs, express-session
   
   you may clone and contribute!!! have fun!!!
   ```sh
