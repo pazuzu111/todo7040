@@ -1,6 +1,6 @@
 # todo7040
 
-todo app full CRUD functionality (MVC)
+EXPRESS todo app full CRUD functionality (MVC)
 
 # stack used
 
